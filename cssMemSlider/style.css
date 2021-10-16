@@ -4,19 +4,19 @@ html {
 
 body {
     margin: 0 auto;
-    background: url("./assets/fon.jpg") no-repeat center center;
+    background: linear-gradient( rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.8) ), url("./assets/fon.jpg") no-repeat center center;
     background-size: cover;
+    height: 100vh;
 }
 
 .container {
-    height: 100vh;
-
+    height: calc(100% - 100px);
 }
 
 .mems {
     margin: 2.5em 25%;
     display: flex;
-    height: 75%;
+    height: 90%;
     flex-wrap: wrap-reverse;
     align-items: center;
 }
@@ -25,10 +25,12 @@ body {
     width: 100%;
     height: 90%;
     box-shadow: inset 0 0 2.5em 0.2em #000000;
-    background: green;
-    transition: 0.5s;
+    background: url(./assets/mem1.jpg) no-repeat center;
+    background-size: 100% 100%;
+    transition: 1s ease all;
     transition-timing-function: ease;
     border-radius: 1.5em;
+    margin-bottom: 1.5em;
 }
 
 .text {
@@ -37,7 +39,7 @@ body {
     font-size: 2em;
     font-weight: 900;
     letter-spacing: 0.15em;
-    color: white;
+    color: yellow;
     display: flex;
     width: calc(100% - 230px);
     word-break: break-all;
@@ -54,22 +56,50 @@ input[type="radio"]:hover, label:hover {
 }
 
 #memasik2:checked ~ .mem {
-    background: yellow;
+    background: url(./assets/mem2.jpg) no-repeat center;
+    background-size: 100% 100%;
 }
 
 #memasik3:checked ~ .mem {
-    background: blue;
+    background: url(./assets/mem3.jpg) no-repeat center;
+    background-size: 100% 100%;
 }
 
 #memasik4:checked ~ .mem {
-    background: red;
+    background: url(./assets/mem4.jpg) no-repeat center;
+    background-size: 100% 100%;
 }
 
 #memasik5:checked ~ .mem {
-    background: orchid;
+    background: url(./assets/mem5.jpg) no-repeat center;
+    background-size: 100% 100%;
 }
 
 label {
     margin-left: -2.8em;
     padding: 1.8em;
+}
+
+.footer-container {
+    display: flex;
+    justify-content: space-between;
+    font-family: cursive;
+    font-size: 1.5em;
+    font-weight: 600;
+    color: #9e9e9e59;
+    margin: 0 25%;
+}
+
+a {
+    text-decoration: none;
+    color: #9e9e9e59;
+}
+
+.rs-school, .github {
+    transition: 1s;
+}
+
+.rs-school:hover, .github:hover {
+    transform: scale(1.2);
+    color: white;
 }
