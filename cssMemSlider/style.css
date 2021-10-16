@@ -1,0 +1,296 @@
+html {
+    overflow: hidden;
+}
+
+body {
+    margin: 0 auto;
+    background: linear-gradient( rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.8) ), url("./assets/fon.jpg") no-repeat center center;
+    background-size: cover;
+    height: 100vh;
+}
+
+.container {
+    margin: 0 auto;
+    max-width: 120em;
+    height: 88%;
+}
+
+.mems {
+    margin: 3em 23%;
+    display: flex;
+    flex-wrap: wrap-reverse;
+    align-items: center;
+}
+
+.mem {
+    width: 100%;
+    height: 32vw;
+    box-shadow: inset 0 0 2.5em 0.2em #000000;
+    background: url(./assets/mem1.jpg) no-repeat center;
+    background-size: 100% 100%;
+    border-radius: 1.5em;
+    margin-bottom: 2.5em;
+    animation-name: bounce;
+    animation-timing-function: ease;
+    animation-duration: 1s;
+}
+
+.text {
+    margin: 0;
+    font-family: cursive;
+    font-size: 1.2vw;
+    font-weight: 900;
+    letter-spacing: 0.15em;
+    color: yellow;
+    display: flex;
+    animation-duration: 1.5s;
+}
+
+input[type="radio"] {
+    display: none;
+}
+
+label {
+    padding: 1.1em;
+    margin-top: -3em !important;
+    animation-name: bounce;
+    animation-timing-function: ease;
+    animation-duration: 1.3s;
+}
+
+.label1 {
+    margin-left: calc(100% - 22em);
+}
+
+input[type="radio"] + label span {
+    display: block;
+    background-color: yellow;
+    border: 0.3em solid yellow;
+    border-radius: 50%;
+    padding: 0.8em;
+    transition: 1.5s;
+}
+
+input[type="radio"]:checked + label span {
+    background: none;
+}
+
+label:hover span {
+    background: linear-gradient( rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5) ), yellow;
+    cursor: pointer;
+}
+
+input[type="radio"]:hover, label:hover {
+    cursor: pointer;
+    transform: scale(1.2);
+}
+
+span.text {
+    display: none;
+}
+
+#memasik1:checked ~ span.text1{
+    display: block;
+    animation-name: bounce;
+    animation-timing-function: ease;
+}
+
+#memasik2:checked ~ .mem {
+    background: url(./assets/mem2.jpg) no-repeat center;
+    background-size: 100% 100%;
+    animation-name: bounce-1;
+    animation-timing-function: ease;
+}
+
+#memasik2:checked ~ span.text2{
+    display: block;
+    animation-name: bounce;
+    animation-timing-function: ease;
+}
+
+#memasik3:checked ~ .mem {
+    background: url(./assets/mem3.jpg) no-repeat center;
+    background-size: 100% 100%;
+    animation-name: bounce-2;
+    animation-timing-function: ease;
+}
+
+#memasik3:checked ~ span.text3{
+    display: block;
+    animation-name: bounce;
+    animation-timing-function: ease;
+}
+
+#memasik4:checked ~ .mem {
+    background: url(./assets/mem4.jpg) no-repeat center;
+    background-size: 100% 100%;
+    animation-name: bounce-3;
+    animation-timing-function: ease;
+}
+
+#memasik4:checked ~ span.text4{
+    display: block;
+    animation-name: bounce;
+    animation-timing-function: ease;
+}
+
+#memasik5:checked ~ .mem {
+    background: url(./assets/mem5.jpg) no-repeat center;
+    background-size: 100% 100%;
+    animation-name: bounce-4;
+    animation-timing-function: ease;
+}
+
+#memasik5:checked ~ span.text5{
+    display: block;
+    animation-name: bounce;
+    animation-timing-function: ease;
+}
+
+.footer-container {
+    display: flex;
+    justify-content: space-between;
+    font-family: cursive;
+    font-size: 1.5vw;
+    font-weight: 600;
+    color: #9e9e9e59;
+    margin: 0 23%;
+}
+
+footer {
+    margin: 0 auto;
+    max-width: 120em;
+}
+
+a {
+    text-decoration: none;
+    color: #9e9e9e85;
+}
+
+.rs-school, .github {
+    transition: 1s;
+}
+
+.rs-school:hover, .github:hover {
+    transform: scale(1.2);
+    color: white;
+}
+
+@keyframes bounce {
+    0%  {
+        opacity: 0;
+        transform: translateX(-600px);
+    }
+    100% {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+@keyframes bounce-1 {
+    0%  {
+        opacity: 0;
+        transform: translateX(-600px);
+    }
+    100% {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+@keyframes bounce-2 {
+    0%  {
+        opacity: 0;
+        transform: translateX(-600px);
+    }
+    100% {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+@keyframes bounce-3 {
+    0%  {
+        opacity: 0;
+        transform: translateX(-600px);
+    }
+    100% {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+@keyframes bounce-4 {
+    0%  {
+        opacity: 0;
+        transform: translateX(-600px);
+    }
+    100% {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+@media (max-width: 1440px) {
+    label {
+        padding: 0.5em !important;
+        margin-top: -2em !important;
+    }
+
+    .label1 {
+        margin-left: calc(100% - 16em);
+    }
+}
+
+@media (max-width: 1024px) {
+    .mems {
+        margin: 3em 10%;
+    }
+
+    .mem {
+        height: 52vw;
+    }
+
+    label {
+        padding: 0.8em !important;
+        margin-top: -0.5em !important;
+    }
+
+    .label1 {
+        margin-left: calc(50% - 10em);
+    }
+
+    span.text {
+        margin: 2em 3em -4em 0;
+    }
+
+    .text {
+        font-size: 2.6vw;
+    }
+
+    .footer-container, a {
+        font-size: 2vw;
+        color: #c4c4c4;
+    }
+
+    .footer-container {
+        margin: 0 10%;
+    }
+}
+
+@media (max-width: 620px) {
+    .mems {
+        margin: 3em 5%;
+    }
+
+    .mem {
+        height: 62vw;
+    }
+
+    .footer-container, a {
+        font-size: 2.5vw;
+    }
+
+    .text {
+        font-size: 3vw;
+    }
+}
