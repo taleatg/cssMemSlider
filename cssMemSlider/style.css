@@ -28,11 +28,11 @@ body {
     box-shadow: inset 0 0 2.5em 0.2em #000000;
     background: url(./assets/mem1.jpg) no-repeat center;
     background-size: 100% 100%;
-    transition: 1.5s ease all;
     border-radius: 1.5em;
     margin-bottom: 2.5em;
-    animation-name: open;
-    animation-duration: 1.5s;
+    animation-name: bounce;
+    animation-timing-function: ease;
+    animation-duration: 1s;
 }
 
 .text {
@@ -43,8 +43,7 @@ body {
     letter-spacing: 0.15em;
     color: yellow;
     display: flex;
-    animation-name: open;
-    animation-duration: 1s;
+    animation-duration: 1.5s;
 }
 
 input[type="radio"] {
@@ -52,31 +51,33 @@ input[type="radio"] {
 }
 
 label {
-    margin-top: -2em !important;
+    padding: 1.1em;
+    margin-top: -3em !important;
+    animation-name: bounce;
+    animation-timing-function: ease;
+    animation-duration: 1.3s;
 }
 
 .label1 {
-    margin-left: calc(100% - 16em) !important;
+    margin-left: calc(100% - 22em);
 }
 
-input[type="radio"] + label {
+input[type="radio"] + label span {
     display: block;
     background-color: yellow;
     border: 0.3em solid yellow;
     border-radius: 50%;
-    margin: 0.5em;
     padding: 0.8em;
-    animation-name: open;
-    animation-duration: 1.5s;
     transition: 1.5s;
 }
 
-input[type="radio"]:checked + label {
+input[type="radio"]:checked + label span {
     background: none;
 }
 
-input[type="radio"] + label:hover {
+label:hover span {
     background: linear-gradient( rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5) ), yellow;
+    cursor: pointer;
 }
 
 input[type="radio"]:hover, label:hover {
@@ -90,42 +91,60 @@ span.text {
 
 #memasik1:checked ~ span.text1{
     display: block;
+    animation-name: bounce;
+    animation-timing-function: ease;
 }
 
 #memasik2:checked ~ .mem {
     background: url(./assets/mem2.jpg) no-repeat center;
     background-size: 100% 100%;
+    animation-name: bounce-1;
+    animation-timing-function: ease;
 }
 
 #memasik2:checked ~ span.text2{
     display: block;
+    animation-name: bounce;
+    animation-timing-function: ease;
 }
 
 #memasik3:checked ~ .mem {
     background: url(./assets/mem3.jpg) no-repeat center;
     background-size: 100% 100%;
+    animation-name: bounce-2;
+    animation-timing-function: ease;
 }
 
 #memasik3:checked ~ span.text3{
     display: block;
+    animation-name: bounce;
+    animation-timing-function: ease;
 }
 
 #memasik4:checked ~ .mem {
     background: url(./assets/mem4.jpg) no-repeat center;
     background-size: 100% 100%;
+    animation-name: bounce-3;
+    animation-timing-function: ease;
 }
 
 #memasik4:checked ~ span.text4{
     display: block;
+    animation-name: bounce;
+    animation-timing-function: ease;
 }
 
 #memasik5:checked ~ .mem {
     background: url(./assets/mem5.jpg) no-repeat center;
     background-size: 100% 100%;
+    animation-name: bounce-4;
+    animation-timing-function: ease;
 }
 
 #memasik5:checked ~ span.text5{
     display: block;
+    animation-name: bounce;
+    animation-timing-function: ease;
 }
 
 .footer-container {
@@ -157,27 +176,68 @@ a {
     color: white;
 }
 
-@keyframes open {
-    0% {
-        display: block;
+@keyframes bounce {
+    0%  {
         opacity: 0;
-        transform: scale(0.6);
+        transform: translateX(-600px);
     }
     100% {
-        display: block;
         opacity: 1;
-        transform: scale(1);
+        transform: translateX(0);
+    }
+}
+@keyframes bounce-1 {
+    0%  {
+        opacity: 0;
+        transform: translateX(-600px);
+    }
+    100% {
+        opacity: 1;
+        transform: translateX(0);
     }
 }
 
-@media (min-width: 1025px) and (max-width: 1440px) {
+@keyframes bounce-2 {
+    0%  {
+        opacity: 0;
+        transform: translateX(-600px);
+    }
+    100% {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+@keyframes bounce-3 {
+    0%  {
+        opacity: 0;
+        transform: translateX(-600px);
+    }
+    100% {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+@keyframes bounce-4 {
+    0%  {
+        opacity: 0;
+        transform: translateX(-600px);
+    }
+    100% {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+@media (max-width: 1440px) {
     label {
-        padding: 0.4em !important;
-        margin-top: -1.2em !important;
+        padding: 0.5em !important;
+        margin-top: -2em !important;
     }
 
     .label1 {
-        margin-left: calc(100% - 12em) !important;
+        margin-left: calc(100% - 16em);
     }
 }
 
@@ -187,20 +247,20 @@ a {
     }
 
     .mem {
-        height: 48vw;
+        height: 52vw;
     }
 
     label {
-        padding: 0.3em !important;
+        padding: 0.8em !important;
         margin-top: -0.5em !important;
     }
 
     .label1 {
-        margin-left: calc(50% - 5em) !important;
+        margin-left: calc(50% - 10em);
     }
 
     span.text {
-        margin: 2em 1em -4em 0;
+        margin: 2em 3em -4em 0;
     }
 
     .text {
